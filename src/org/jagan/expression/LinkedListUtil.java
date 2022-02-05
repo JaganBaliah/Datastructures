@@ -23,39 +23,39 @@ public class LinkedListUtil {
 		}		
 		return middle.getValue();
 	}
+
+	static class LList {
+		Node head;
+		Node tail;
+
+		public LList() {
+			this.head = new Node("HEAD");
+			tail = head;
+		}
+
+		public void add(Node node) {
+			tail.next = node;
+			tail = node;
+		}
+
+		public static class Node {
+			String value;
+			Node next;
+
+			public Node(String value) {
+				this.value = value;
+				this.next = null;
+			}
+
+			public String getValue() {
+				return value;
+			}
+
+			public void setNext(Node node) {
+				next = node;
+			}
+
+		}
+	}
 }
 
-class LList {
-	
-	Node head;
-	Node tail;
-	
-	public LList() {
-		this.head = new Node("HEAD");
-		tail = head;
-	}
-	
-	public void add(Node node) {
-		tail.next = node;
-		tail = node;
-	}
-	
-	public static class Node {
-		String value;
-		Node next;
-		
-		public Node(String value) {
-			this.value = value;
-			this.next = null;
-		}
-		
-		public String getValue() {
-			return value;
-		}
-		
-		public void setNext(Node node) {
-			next = node;
-		}
-		
-	}
-}

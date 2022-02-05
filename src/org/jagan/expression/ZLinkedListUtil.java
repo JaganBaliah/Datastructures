@@ -26,22 +26,15 @@ public class ZLinkedListUtil {
 		Node head;
 		Node tail;
 		
-		public LinkedList(Node node) {
-			this.head = this.tail = node;
-		}
+		public LinkedList(Node node) { }
 		
-		public void addNode(Node node) {
-			this.tail.next = node;
-			this.tail = node;
-		}
+		public void addNode(Node node) { }
 		
 		static class Node {
 			String data;
 			Node next;
 			
-			public Node(String data) {
-				this.data = data;
-			}
+			public Node(String data) { }
 		}
 	}
 }

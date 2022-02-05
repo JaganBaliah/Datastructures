@@ -16,12 +16,16 @@ public class ZGraphUtil {
 		
         System.out.println("DFS for 2");
 		g.dfsFor(2);
+		System.out.println();
 		System.out.println("DFS All Vertex");
 		g.dfsForAll();
+		System.out.println();
 		System.out.println("BFS for 2");
 		g.bfsFor(2);
+		System.out.println();
 		System.out.println("BFS All Vertex");
 		g.bfsForAll();
+		System.out.println();
 
 		g = new Graph(7);
 		g.addEdge(0, 1); 
@@ -32,7 +36,7 @@ public class ZGraphUtil {
     	g.addEdge(5, 6); 
     	g.addEdge(5, 2); 
     	g.addEdge(6, 0);
-		System.out.println("\nMother Vertex : " + g.printMotherVertex());
+		//System.out.println("\nMother Vertex : " + g.printMotherVertex());
 		
 		g = new Graph(4); 
 		g.addEdge(0, 1); 
@@ -42,7 +46,7 @@ public class ZGraphUtil {
         g.addEdge(2, 3); 
         g.addEdge(3, 3); 
         
-		g.printTransitiveClosure();
+		//g.printTransitiveClosure();
 		
 		g = new Graph(5); 
         
@@ -54,7 +58,7 @@ public class ZGraphUtil {
 		
         g.dfsFor(0);
 	}
-	
+
 	static class Graph {
 		int n;
 		List<Integer>[] adjList;
@@ -83,5 +87,5 @@ public class ZGraphUtil {
 		void closureUtil(int s, int v) {}
 		
 	}
-	
+
 }
