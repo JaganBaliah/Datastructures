@@ -43,7 +43,8 @@ public class ZTreasureIslandShortestRoute {
 	}
 
 	public static int shortestRoute(char[][] grid) {
-		return 0;
+
+		return -1;
 	}
 	
 	static class Point {

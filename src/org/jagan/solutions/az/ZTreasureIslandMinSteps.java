@@ -40,7 +40,8 @@ public class ZTreasureIslandMinSteps {
 	}
 	
 	public static int minSteps(char[][] grid) {
-		return 0;
+
+		return -1;
 	}
 	
 	

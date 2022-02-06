@@ -54,6 +54,7 @@ public class ZNumberOfIslands {
 	}
 	
 	public static int numIslands(char[][] grid) {
+
 		return 0;
 	}
 	
@@ -62,6 +63,7 @@ public class ZNumberOfIslands {
 	}
 	
 	public static int numIslands1(char[][] grid) {
+
 		return 0;
 	}
 
