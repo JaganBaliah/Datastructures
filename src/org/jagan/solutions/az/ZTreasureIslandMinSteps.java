@@ -1,6 +1,10 @@
 package org.jagan.solutions.az;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZTreasureIslandMinSteps {
 
@@ -36,15 +40,16 @@ public class ZTreasureIslandMinSteps {
 				{'X', 'D', 'D', 'O'}
 		};
 		System.out.println("Input : " + Arrays.deepToString(input));
-		System.out.println("Min Steps : " + minSteps(input));
+		int output = minSteps(input);
+		System.out.println("Min Steps : " + output);
+		Assertions.assertEquals(5, output, "Min steps not matching...");
 	}
 	
 	public static int minSteps(char[][] grid) {
 
-		return -1;
+		return 0;
 	}
-	
-	
+
 	static class Point {
 		int x;
 		int y;

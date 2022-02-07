@@ -1,5 +1,11 @@
 package org.jagan.solutions.az;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.junit.jupiter.api.Assertions;
+
 public class ZNumberOfIslands {
 
 	/*
@@ -35,21 +41,44 @@ public class ZNumberOfIslands {
 	 * 
 	 */
 	public static void main(String[] args) {
-		char[][] grid = {
+		int output;
+		char[][] input = {
 				{'1', '1', '1', '1', '0'},
 				{'1', '1', '0',	'1', '0'},
 				{'1', '1', '0', '0', '0'},
 				{'0', '0', '0', '0', '0'}
 		};
-		System.out.println("Number Of Islands : " + numIslands1(grid));
+		System.out.println("Input : " + Arrays.deepToString(input));
+		output = numIslands(input);
+		Assertions.assertEquals(1, output, "Incorrect island count...");
+		input = new char[][] {
+				{'1', '1', '1', '1', '0'},
+				{'1', '1', '0', '1', '0'},
+				{'1', '1', '0', '0', '0'},
+				{'0', '0', '0', '0', '0'}
+		};
+		output = numIslands1(input);
+		Assertions.assertEquals(1, output, "Incorrect island count...");
+		System.out.println("Number Of Islands : " + output);
 		
-		grid = new char[][]{
+		input = new char[][]{
 				{'1', '1', '0', '0', '0'},
 				{'1', '1', '0',	'0', '0'},
 				{'0', '0', '1', '0', '0'},
 				{'0', '0', '0', '1', '1'}
 		};
-		System.out.println("Number Of Islands : " + numIslands1(grid));
+		System.out.println("Input : " + Arrays.deepToString(input));
+		output = numIslands(input);
+		Assertions.assertEquals(3, output, "Incorrect island count...");
+		input = new char[][]{
+				{'1', '1', '0', '0', '0'},
+				{'1', '1', '0',	'0', '0'},
+				{'0', '0', '1', '0', '0'},
+				{'0', '0', '0', '1', '1'}
+		};
+		output = numIslands1(input);
+		Assertions.assertEquals(3, output, "Incorrect island count...");
+		System.out.println("Number Of Islands : " + output);
 		
 	}
 	
@@ -58,8 +87,8 @@ public class ZNumberOfIslands {
 		return 0;
 	}
 	
-	public static void dfs(char[][] grid, int i, int j) {
-		
+	public static void dfs(char[][] grid, int x, int y) {
+
 	}
 	
 	public static int numIslands1(char[][] grid) {
@@ -68,7 +97,7 @@ public class ZNumberOfIslands {
 	}
 
 	public static void bfs(char[][] grid, int i, int j) {
-		
+
 	}
 	
 	static class Point {

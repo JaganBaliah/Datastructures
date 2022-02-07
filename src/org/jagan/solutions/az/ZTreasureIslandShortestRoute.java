@@ -1,6 +1,10 @@
 package org.jagan.solutions.az;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZTreasureIslandShortestRoute {
 
@@ -40,11 +44,12 @@ public class ZTreasureIslandShortestRoute {
 		System.out.println("Input : " + Arrays.deepToString(input));
 		int output = shortestRoute(input);
 		System.out.println("Shorted Route : " + output);
+		Assertions.assertEquals(3, output, "Shortest route is incorrect...");
 	}
 
 	public static int shortestRoute(char[][] grid) {
 
-		return -1;
+		return 0;
 	}
 	
 	static class Point {

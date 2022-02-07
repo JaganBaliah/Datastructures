@@ -1,5 +1,11 @@
 package org.jagan.solutions.az;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+
+import org.junit.jupiter.api.Assertions;
+
 public class ZRottingOranges {
 	
 	/*
@@ -49,24 +55,33 @@ public class ZRottingOranges {
 	 */
 
 	public static void main(String[] args) {
-		int[][] grid = {
+		int[][] input = {
 				{2, 1, 1},
 				{1, 1, 0},
 				{0, 1, 1}
 		};
-		System.out.println("Time taken in minutes : " + orangesRotting(grid));
-		
-		grid = new int[][] {
+		System.out.println("Input : " + Arrays.deepToString(input));
+		int output = orangesRotting(input);
+		Assertions.assertEquals(4, output, "Incorrect time taken...");
+		System.out.println("Time taken in minutes : " + output);
+
+		input = new int[][] {
 			{2, 1 ,1},
 			{0, 1, 1},
 			{1, 0, 1}
 		};
-		System.out.println("Time taken in minutes : " + orangesRotting(grid));
-		
-		grid = new int[][] {
+		System.out.println("Input : " + Arrays.deepToString(input));
+		output = orangesRotting(input);
+		Assertions.assertEquals(-1, output, "Incorrect time taken...");
+		System.out.println("Time taken in minutes : " + output);
+
+		input = new int[][] {
 			{0, 2}
 		};
-		System.out.println("Time taken in minutes : " + orangesRotting(grid));
+		System.out.println("Input : " + Arrays.deepToString(input));
+		output = orangesRotting(input);
+		Assertions.assertEquals(0, output, "Incorrect time taken...");
+		System.out.println("Time taken in minutes : " + output);
 	}
 	
 	public static int orangesRotting0(int[][] grid) {
