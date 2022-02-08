@@ -55,30 +55,45 @@ public class ZGraphUtil {
         g.addEdge(2, 1); 
         g.addEdge(0, 3); 
         g.addEdge(1, 4);
-		
+		System.out.println("DFS for 0 : ");
         g.dfsFor(0);
 	}
 
 	static class Graph {
 		int n;
 		List<Integer>[] adjList;
-		int[][] transclosure;
-		
-		Graph(int n) {}
+
+		Graph(int n) {
+
+		}
 	
-		void addEdge(int src, int desc) {}
+		void addEdge(int src, int dest) {
+
+		}
 		
-		void dfs(int v, boolean[] visited) {}
+		void dfs(int v, boolean[] visited) {
+
+		}
 		
-		void dfsFor(int v) {}
+		void dfsFor(int v) {
+
+		}
 		
-		void dfsForAll() {}
+		void dfsForAll() {
+
+		}
 		
-		void bfs(int v, boolean[] visited) {}
+		void bfs(int v, boolean[] visited) {
+
+		}
 		
-		void bfsFor(int v) {}
+		void bfsFor(int v) {
+
+		}
 		
-		void bfsForAll() {}
+		void bfsForAll() {
+
+		}
 		
 		int printMotherVertex() {return 0;}
 		

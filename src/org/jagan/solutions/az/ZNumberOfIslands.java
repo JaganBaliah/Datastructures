@@ -83,23 +83,18 @@ public class ZNumberOfIslands {
 	}
 	
 	public static int numIslands(char[][] grid) {
+		int count = 0;
 
-		return 0;
+		return count;
 	}
-	
-	public static void dfs(char[][] grid, int x, int y) {
 
-	}
 	
 	public static int numIslands1(char[][] grid) {
+		int count = 0;
 
-		return 0;
+		return count;
 	}
 
-	public static void bfs(char[][] grid, int i, int j) {
-
-	}
-	
 	static class Point {
 		int x;
 		int y;
