@@ -93,16 +93,16 @@ public class ZBattleship {
 	public static void main(String[] args) {
 		String ans = "";
 		ans = solution(4,"1B 2C,2D 4D","2B 2D 3D 4D 4A");
+		System.out.println(ans);
 		Assertions.assertEquals("1,1", ans, "Incorrect sunk & hit ships...");
-		System.out.println(ans);
-		
+
 		ans = solution(4,"1A 1B,2C 2C","1B");
-		Assertions.assertEquals("0,1", ans, "Incorrect sunk & hit ships...");
 		System.out.println(ans);
-		
+		Assertions.assertEquals("0,1", ans, "Incorrect sunk & hit ships...");
+
 		ans = solution(12, "1A 2A,12A 12A", "12A");
-		Assertions.assertEquals("1,0", ans, "Incorrect sunk & hit ships...");
 	    System.out.println(ans);
+		Assertions.assertEquals("1,0", ans, "Incorrect sunk & hit ships...");
 	}
 
 	public static String solution(int n, String shipPositions, String hitPositions) {

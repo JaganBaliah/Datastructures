@@ -61,9 +61,7 @@ public class ZFavoriteGenres {
 	 */
 	public static void main(String[] args) {
 		Map<String, List<String>> userSongsMap = new HashMap<>();
-		
 		ArrayList<String> songs = null;
-		
 		songs = new ArrayList<>();
 		songs.add("song1");
 		songs.add("song2");
@@ -71,7 +69,6 @@ public class ZFavoriteGenres {
 		songs.add("song4");
 		songs.add("song8");
 		userSongsMap.put("David", songs);
-		
 		songs = new ArrayList<>();
 		songs.add("song5");
 		songs.add("song6");
@@ -79,28 +76,21 @@ public class ZFavoriteGenres {
 		userSongsMap.put("Emma", songs);
 
 		Map<String, List<String>> genreSongsMap = new HashMap<>();
-		
 		songs = new ArrayList<>();
 		songs.add("song1");
 		songs.add("song3");
 		genreSongsMap.put("Rock", songs);
-		
 		songs = new ArrayList<>();
 		songs.add("song7");
 		genreSongsMap.put("Dubstep", songs);
-		
-		
 		songs = new ArrayList<>();
 		songs.add("song2");
 		songs.add("song4");
 		genreSongsMap.put("Techno", songs);
-		
-		
 		songs = new ArrayList<>();
 		songs.add("song5");
 		songs.add("song6");
 		genreSongsMap.put("Pop", songs);
-		
 		songs = new ArrayList<>();
 		songs.add("song8");
 		songs.add("song9");
@@ -109,12 +99,13 @@ public class ZFavoriteGenres {
 		System.out.println("Input :");
 		System.out.println("User Songs : " + userSongsMap);
 		System.out.println("Genre Songs : " + genreSongsMap);
-
 		Map<String, List<String>> favGenresMap = favoriteGenres(userSongsMap, genreSongsMap);
+		System.out.println("Output : " + favGenresMap);
 		Assertions.assertEquals(2, favGenresMap.entrySet().size());
 		Assertions.assertEquals(2, favGenresMap.get("David").size());
-		Assertions.assertEquals("[song1, song2", favGenresMap.get("David"));
-		System.out.println("Output : " + favGenresMap);
+		Assertions.assertEquals(1, favGenresMap.get("Emma").size());
+		Assertions.assertEquals("[Rock, Techno]", favGenresMap.get("David").toString());
+		Assertions.assertEquals("[Pop]", favGenresMap.get("Emma").toString());
 
 		genreSongsMap = new HashMap<>();
 		userSongsMap = new HashMap<>();
@@ -129,10 +120,18 @@ public class ZFavoriteGenres {
 		System.out.println("Input :");
 		System.out.println("User Songs : " + userSongsMap);
 		System.out.println("Genre Songs : " + genreSongsMap);
+		favGenresMap = favoriteGenres(userSongsMap, genreSongsMap);
 		System.out.println("Output : " + favoriteGenres(userSongsMap, genreSongsMap));
+		Assertions.assertEquals(2, favGenresMap.entrySet().size());
+		Assertions.assertEquals(0, favGenresMap.get("David").size());
+		Assertions.assertEquals(0, favGenresMap.get("Emma").size());
+		Assertions.assertEquals("[]", favGenresMap.get("David").toString());
+		Assertions.assertEquals("[]", favGenresMap.get("Emma").toString());
+
 	}
 	
 	public static Map<String, List<String>> favoriteGenres(Map<String, List<String>> userSongsMap, Map<String, List<String>> genreSongsMap) {
+
 
 		return null;
 	}

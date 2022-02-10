@@ -36,17 +36,17 @@ public class ZMergeIntervals {
 		};
 		System.out.println("Input : " + Arrays.deepToString(intervals));
 		int[][] output = merge(intervals);
-		Assertions.assertEquals("[[1, 6], [8, 10], [15, 18]]", Arrays.deepToString(output));
 		System.out.println("Output : " + Arrays.deepToString(output));
-		
+		Assertions.assertEquals("[[1, 6], [8, 10], [15, 18]]", Arrays.deepToString(output));
+
 		intervals = new int[][] {
 			{1, 4},
 			{4, 5}
 		};
 		System.out.println("Input : " + Arrays.deepToString(intervals));
 		output = merge(intervals);
-		Assertions.assertEquals("[[1, 5]]", Arrays.deepToString(output));
 		System.out.println("Output : " + Arrays.deepToString(output));
+		Assertions.assertEquals("[[1, 5]]", Arrays.deepToString(output));
 
 		intervals = new int[][] {
 				{1, 5},
@@ -55,8 +55,8 @@ public class ZMergeIntervals {
 		};
 		System.out.println("Input : " + Arrays.deepToString(intervals));
 		output = merge(intervals);
-		Assertions.assertEquals("[[1, 5], [6, 9]]", Arrays.deepToString(output));
 		System.out.println("Output : " + Arrays.deepToString(output));
+		Assertions.assertEquals("[[1, 5], [6, 9]]", Arrays.deepToString(output));
 	}
 	
 	public static int[][] merge(int[][] intervals) {

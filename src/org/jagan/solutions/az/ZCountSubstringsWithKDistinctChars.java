@@ -1,5 +1,7 @@
 package org.jagan.solutions.az;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZCountSubstringsWithKDistinctChars {
 
 	/*
@@ -24,42 +26,54 @@ public class ZCountSubstringsWithKDistinctChars {
 
 	public static void main(String[] args) 
 	{ 
-		String str = "abcbaa"; 
-		int k = 3; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist(str, k)); 
-		
-		str = "pqpqs";
-		k = 2; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist(str, k)); 
-		
-		str = "aabab"; 
-		k = 3; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist(str, k)); 
-		
-		str = "abcbaa"; 
-		k = 3; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist1(str, k)); 
-		
-		str = "pqpqsr"; 
-		k = 2; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist1(str, k)); 
-		
-		str = "aabab"; 
-		k = 3; 
-		System.out.println("Total substrings with exactly " +  
-				k + " distinct characters in " + str + " : "
-				+ countkDist1(str, k));
-		
+		String input = "abcbaa";
+		int k = 3;
+		int output = countkDist(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(8, output, "Incorrect Distinct Count...");
+
+		input = "pqpqs";
+		k = 2;
+		output = countkDist(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(7, output, "Incorrect Distinct Count...");
+
+		input = "aabab";
+		k = 3;
+		output = countkDist(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(0, output, "Incorrect Distinct Count...");
+
+		input = "abcbaa";
+		k = 3;
+		output = countkDist1(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(0, output, "Incorrect Distinct Count...");
+
+		input = "pqpqsr";
+		k = 2;
+		output = countkDist1(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(0, output, "Incorrect Distinct Count...");
+
+		input = "aabab";
+		k = 3;
+		output = countkDist1(input, k);
+		System.out.println("Total substrings with exactly " +
+				k + " distinct characters in " + input + " : "
+				+ output);
+		Assertions.assertEquals(0, output, "Incorrect Distinct Count...");
+
 	} 
 
 	public static int countkDist1(String str, int k) {

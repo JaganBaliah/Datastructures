@@ -7,7 +7,7 @@ public class ZLongestStringWithVowel {
 	/*
 	 * You are given with a string . Your task is to remove at most two substrings of
 	 * any length from the given string such that the remaining string contains
-	 * vowels('a','e','i','o','u') only. Your aim is the maximize the length of the
+	 * vowels('a','e','i','o','u') only. Your aim is to maximize the length of the
 	 * remaining string. Output the length of remaining string after removal of
 	 * at most two substrings. 
 	 * NOTE: The answer may be 0, i.e. removing the entire string.
@@ -25,12 +25,12 @@ public class ZLongestStringWithVowel {
 
 		String input = "earthproblem";
 		int output = longestString(input);
+		System.out.println("LongestStringWithVowel for " + input + " : " + output);
 		Assertions.assertEquals(3, output);
-		System.out.println("Output : " + output);
 		input = "letsgosomewhere";
 		output = longestString(input);
+		System.out.println("LongestStringWithVowel for " + input + " : " + output);
 		Assertions.assertEquals(2, output);
-		System.out.println("Output : " + longestString(input));
 	}
 
 	
@@ -38,4 +38,5 @@ public class ZLongestStringWithVowel {
 
 		return 0;
 	}
+
 }

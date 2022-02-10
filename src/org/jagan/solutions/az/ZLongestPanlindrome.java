@@ -1,5 +1,7 @@
 package org.jagan.solutions.az;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZLongestPanlindrome {
 
 	/*
@@ -15,16 +17,23 @@ public class ZLongestPanlindrome {
 	 * 
 	 */
 	public static void main(String[] args) {
-		String input1 = "babad";
-		System.out.println("Longest palindrome for \"" + input1 + "\" : " + findLongestPalindrome(input1));
-		String input2 = "cbbd";
-		System.out.println("Longest palindrome for \"" + input2 + "\" : " + findLongestPalindrome(input2));
-		String input3 = "abededeba";
-		System.out.println("Longest palindrome for \"" + input3 + "\" : " + findLongestPalindrome(input3));
+		String input = "babad";
+		String output = findLongestPalindrome(input);
+		System.out.println("Longest palindrome for \"" + input + "\" : " + output);
+		Assertions.assertEquals("bab", output, "Incorrect longest Palindrome string...");
+		input = "cbbd";
+		output = findLongestPalindrome(input);
+		System.out.println("Longest palindrome for \"" + input + "\" : " + output);
+		Assertions.assertEquals("bb", output, "Incorrect longest Palindrome string...");
+		input = "abededeba";
+		output = findLongestPalindrome(input);
+		System.out.println("Longest palindrome for \"" + input + "\" : " + output);
+		Assertions.assertEquals("abededeba", output, "Incorrect longest Palindrome string...");
 	}
-	
+
 	public static String findLongestPalindrome(String input) {
 
 		return "";
 	}
+
 }

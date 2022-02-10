@@ -24,8 +24,8 @@ public class ZGenerateParantheses {
 	 */
 	public static void main(String[] args) {
 		String paranthesesCombinations = generateParentheses(3);
-		Assertions.assertEquals("[((())), (()()), (())(), ()(()), ()()()]", paranthesesCombinations, "Incorrect Paranthesis combination...");
 		System.out.println("Pairs of parantheses for n = 3 : " + paranthesesCombinations);
+		Assertions.assertEquals("[((())), (()()), (())(), ()(()), ()()()]", paranthesesCombinations, "Incorrect Paranthesis combination...");
 	}
 
 	private static String generateParentheses(int n) {

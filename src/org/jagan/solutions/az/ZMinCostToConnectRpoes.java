@@ -1,6 +1,10 @@
 package org.jagan.solutions.az;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZMinCostToConnectRpoes {
 
@@ -46,13 +50,34 @@ public class ZMinCostToConnectRpoes {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int[] input = {10, 2, 5, 1, 35, 89};
+		int[] input = {8, 4, 6, 12};
 		System.out.println("Input : " + Arrays.toString(input));
 		int output = minCost(input);
 		System.out.println("Output : " + output);
+		Assertions.assertEquals(58, output, "Incorrect cost to connect ropes....");
+
+		input = new int[] {20, 4, 8, 2};
+		System.out.println("Input : " + Arrays.toString(input));
+		output = minCost(input);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals(54, output, "Incorrect cost to connect ropes....");
+
+		input = new int[] {1, 2, 5, 10, 35, 89};
+		System.out.println("Input : " + Arrays.toString(input));
+		output = minCost(input);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals(224, output, "Incorrect cost to connect ropes....");
+
+		input = new int[] {2, 2, 3, 3};
+		System.out.println("Input : " + Arrays.toString(input));
+		output = minCost(input);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals(20, output, "Incorrect cost to connect ropes....");
+
 	}
 
 	public static int minCost(int[] ropes) {
+
 		return 0;
 	}
 	
