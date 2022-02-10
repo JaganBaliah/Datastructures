@@ -1,6 +1,11 @@
 package org.jagan.solutions.az;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZMergeIntervals {
 
@@ -31,6 +36,7 @@ public class ZMergeIntervals {
 		};
 		System.out.println("Input : " + Arrays.deepToString(intervals));
 		int[][] output = merge(intervals);
+		Assertions.assertEquals("[[1, 6], [8, 10], [15, 18]]", Arrays.deepToString(output));
 		System.out.println("Output : " + Arrays.deepToString(output));
 		
 		intervals = new int[][] {
@@ -39,11 +45,23 @@ public class ZMergeIntervals {
 		};
 		System.out.println("Input : " + Arrays.deepToString(intervals));
 		output = merge(intervals);
+		Assertions.assertEquals("[[1, 5]]", Arrays.deepToString(output));
+		System.out.println("Output : " + Arrays.deepToString(output));
+
+		intervals = new int[][] {
+				{1, 5},
+				{2, 4},
+				{6, 9}
+		};
+		System.out.println("Input : " + Arrays.deepToString(intervals));
+		output = merge(intervals);
+		Assertions.assertEquals("[[1, 5], [6, 9]]", Arrays.deepToString(output));
 		System.out.println("Output : " + Arrays.deepToString(output));
 	}
 	
 	public static int[][] merge(int[][] intervals) {
-		return null;
+
+		return new int[intervals.length][];
 	}
 	
 	

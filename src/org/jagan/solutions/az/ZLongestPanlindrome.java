@@ -24,11 +24,7 @@ public class ZLongestPanlindrome {
 	}
 	
 	public static String findLongestPalindrome(String input) {
-		return "";
-	}
-	
-	public static String getPalindrome(String s, int begin, int end) {
-		return "";
-	}
 
+		return "";
+	}
 }

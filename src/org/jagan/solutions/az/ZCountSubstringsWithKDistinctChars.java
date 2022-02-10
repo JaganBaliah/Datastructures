@@ -30,7 +30,7 @@ public class ZCountSubstringsWithKDistinctChars {
 				k + " distinct characters in " + str + " : "
 				+ countkDist(str, k)); 
 		
-		str = "pqpqsr"; 
+		str = "pqpqs";
 		k = 2; 
 		System.out.println("Total substrings with exactly " +  
 				k + " distinct characters in " + str + " : "
@@ -67,6 +67,7 @@ public class ZCountSubstringsWithKDistinctChars {
 	}
 
 	public static int countkDist(String str, int k) {
+
 		return 0;
 	}
 }

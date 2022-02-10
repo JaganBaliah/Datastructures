@@ -1,5 +1,7 @@
 package org.jagan.solutions.az;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZLoadBalancer {
 
 	/*
@@ -49,11 +51,16 @@ public class ZLoadBalancer {
 	 */
 	public static void main(String[] args) {
 		int[] nums1 = {1, 3, 4, 2, 2, 2, 1, 1, 2}, nums2 = {1,1,1,1,1,1};
-		System.out.println(solve(nums1));
-		System.out.println(solve(nums2));
+		boolean output = solve(nums1);
+		Assertions.assertTrue(output);
+		System.out.println(output);
+		output = solve(nums2);
+		Assertions.assertFalse(output);
+		System.out.println(output);
 	}
 	
 	public static boolean solve(int[] nums) {
+
 		return false;
 	}
 

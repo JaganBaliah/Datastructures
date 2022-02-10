@@ -1,6 +1,9 @@
 package org.jagan.solutions.az;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZGenerateParantheses {
 
@@ -20,15 +23,14 @@ public class ZGenerateParantheses {
 	 * 
 	 */
 	public static void main(String[] args) {
-		System.out.println("Pairs of parantheses for n = 3 : " + generateParenthesis(3));
+		String paranthesesCombinations = generateParentheses(3);
+		Assertions.assertEquals("[((())), (()()), (())(), ()(()), ()()()]", paranthesesCombinations, "Incorrect Paranthesis combination...");
+		System.out.println("Pairs of parantheses for n = 3 : " + paranthesesCombinations);
 	}
-	
-	public static List<String> generateParenthesis(int n) {
-		return null;
+
+	private static String generateParentheses(int n) {
+
+		return "";
 	}
-    
-    public static void backtrack(List<String> list, String str, int open, int close, int max){
-    	
-    }
 
 }

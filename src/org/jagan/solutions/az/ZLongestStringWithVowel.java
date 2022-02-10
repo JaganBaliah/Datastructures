@@ -1,5 +1,7 @@
 package org.jagan.solutions.az;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZLongestStringWithVowel {
 
 	/*
@@ -20,16 +22,20 @@ public class ZLongestStringWithVowel {
 	 * 
 	 */
 	public static void main(String[] args) {
-		System.out.println("Output : " + longestString("earthproblem"));
-		System.out.println("Output : " + longestString("letsgosomewhere"));
+
+		String input = "earthproblem";
+		int output = longestString(input);
+		Assertions.assertEquals(3, output);
+		System.out.println("Output : " + output);
+		input = "letsgosomewhere";
+		output = longestString(input);
+		Assertions.assertEquals(2, output);
+		System.out.println("Output : " + longestString(input));
 	}
 
 	
 	public static int longestString(String s){
+
 		return 0;
-	}
-	
-	public static boolean isVowel(char c){
-	    return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
 	}
 }

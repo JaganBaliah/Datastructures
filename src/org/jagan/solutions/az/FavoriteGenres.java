@@ -86,14 +86,12 @@ public class FavoriteGenres {
 		songs = new ArrayList<>();
 		songs.add("song7");
 		genreSongsMap.put("Dubstep", songs);
-		
-		
+
 		songs = new ArrayList<>();
 		songs.add("song2");
 		songs.add("song4");
 		genreSongsMap.put("Techno", songs);
-		
-		
+
 		songs = new ArrayList<>();
 		songs.add("song5");
 		songs.add("song6");
@@ -109,6 +107,21 @@ public class FavoriteGenres {
 		System.out.println("Genre Songs : " + genreSongsMap);
 		
 		System.out.println("Output : " + favoriteGenres(userSongsMap, genreSongsMap));
+
+		genreSongsMap = new HashMap<>();
+		userSongsMap = new HashMap<>();
+		songs = new ArrayList<>();
+		songs.add("song1");
+		songs.add("song2");
+		userSongsMap.put("David", songs);
+		songs = new ArrayList<>();
+		songs.add("song3");
+		songs.add("song4");
+		userSongsMap.put("Emma", songs);
+		System.out.println("Input :");
+		System.out.println("User Songs : " + userSongsMap);
+		System.out.println("Genre Songs : " + genreSongsMap);
+		System.out.println("Output : " + favoriteGenres(userSongsMap, genreSongsMap));
 	}
 	
 	public static Map<String, List<String>> favoriteGenres(Map<String, List<String>> userSongsMap, Map<String, List<String>> genreSongsMap) {
@@ -122,6 +135,10 @@ public class FavoriteGenres {
 		}
 		for(Map.Entry<String, List<String>> entry : userSongsMap.entrySet()) {
 			String user = entry.getKey();
+			if (genreSongsMap.isEmpty()) {
+				rtnVal.put(user, new ArrayList<>());
+				continue;
+			}
 			List<String> genres = new ArrayList<String>();
 			int max = 0;
 			Map<String, Integer> genreCountMap = new HashMap<>();
