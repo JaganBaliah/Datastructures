@@ -2,6 +2,8 @@ package org.jagan.sorting;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZBubbleSortUtil {
 	
 	public static void main(String[] args) {
@@ -9,7 +11,10 @@ public class ZBubbleSortUtil {
 		System.out.println(Arrays.toString(arr));
 		int len = arr.length;
 
+
+
 		System.out.println(Arrays.toString(arr));
+		Assertions.assertEquals("[5, 6, 7, 7, 11, 12, 12, 13]", Arrays.toString(arr));
 	}
 
 }
