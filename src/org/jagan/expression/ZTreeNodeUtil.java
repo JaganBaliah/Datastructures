@@ -1,5 +1,7 @@
 package org.jagan.expression;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 import org.junit.jupiter.api.Assertions;
@@ -13,27 +15,27 @@ public class ZTreeNodeUtil {
 		StringBuilder bldr = null;
 		bldr = new StringBuilder();
 		traverseLevelOrder(node, bldr);
-		Assertions.assertEquals("-+1--3254", bldr.toString(), "Incorrect Level Order...");
 		System.out.println("Level Order : " + bldr.toString());
-		
+		Assertions.assertEquals("-+1--3254", bldr.toString(), "Incorrect Level Order...");
+
 		bldr = new StringBuilder();
 		traversePreOrder(node, bldr);
-		Assertions.assertEquals("-+-32-541", bldr.toString(), "Incorrect Pre Order...");
 		System.out.println("Pre Order : " + bldr.toString());
-		
+		Assertions.assertEquals("-+-32-541", bldr.toString(), "Incorrect Pre Order...");
+
 		bldr = new StringBuilder();
 		traverseInOrder(node, bldr);
-		Assertions.assertEquals("3-2+5-4-1", bldr.toString(), "Incorrect In Order...");
 		System.out.println("In Order : " + bldr.toString());
-		
+		Assertions.assertEquals("3-2+5-4-1", bldr.toString(), "Incorrect In Order...");
+
 		bldr = new StringBuilder();
 		traversePostOrder(node, bldr);
-		Assertions.assertEquals("32-54-+1-", bldr.toString(), "Incorrect Post Order...");
 		System.out.println("Post Order : " + bldr.toString());
+		Assertions.assertEquals("32-54-+1-", bldr.toString(), "Incorrect Post Order...");
 
 		int evaluate = evaluate(node);
-		Assertions.assertEquals(1, evaluate, "Incorrect evaluated value...");
 		System.out.println(evaluate);
+		Assertions.assertEquals(1, evaluate, "Incorrect evaluated value...");
 	}
 	
 	public static void traverseLevelOrder(TreeNode root, StringBuilder bldr) {
@@ -65,10 +67,12 @@ public class ZTreeNodeUtil {
 	}
 
 	public static TreeNode populate(Scanner scanner) {
+
 		return null;
 	}
 
 	public static int evaluate(TreeNode node) {
+
 		return 0;
 	}
 

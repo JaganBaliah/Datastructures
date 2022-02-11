@@ -16,8 +16,8 @@ public class ZLinkedListUtil {
 		list.addNode(new LinkedList.Node("7"));
 
 		LinkedList.Node middleNode = findMiddle(list);
-		Assertions.assertEquals("4", middleNode.data, "Incorrect middle node...");
 		System.out.println("Middle Node : " + middleNode.data);
+		Assertions.assertEquals("4", middleNode.data, "Incorrect middle node...");
 
 		list = new LinkedList(new LinkedList.Node("Root"));
 		list.addNode(new LinkedList.Node("1"));
@@ -28,11 +28,12 @@ public class ZLinkedListUtil {
 		list.addNode(new LinkedList.Node("6"));
 
 		middleNode = findMiddle(list);
-		Assertions.assertEquals("3", middleNode.data, "Incorrect middle node...");
 		System.out.println("Middle Node : " + middleNode.data);
+		Assertions.assertEquals("3", middleNode.data, "Incorrect middle node...");
 	}
 	
 	public static LinkedList.Node findMiddle(LinkedList list) {
+
 		return null;
 	}
 	
