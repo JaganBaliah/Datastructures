@@ -41,7 +41,6 @@ public class ZNumberOfIslands {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int output;
 		char[][] input = {
 				{'1', '1', '1', '1', '0'},
 				{'1', '1', '0',	'1', '0'},
@@ -49,18 +48,21 @@ public class ZNumberOfIslands {
 				{'0', '0', '0', '0', '0'}
 		};
 		System.out.println("Input : " + Arrays.deepToString(input));
-		output = numIslands(input);
-		Assertions.assertEquals(1, output, "Incorrect island count...");
+		int output = numIslands(input);
+		System.out.println("DFS - Number Of Islands : " + output);
+		Assertions.assertEquals(1, output, "DFS Incorrect island count...");
+
 		input = new char[][] {
 				{'1', '1', '1', '1', '0'},
 				{'1', '1', '0', '1', '0'},
 				{'1', '1', '0', '0', '0'},
 				{'0', '0', '0', '0', '0'}
 		};
+		System.out.println("Input : " + Arrays.deepToString(input));
 		output = numIslands1(input);
-		Assertions.assertEquals(1, output, "Incorrect island count...");
-		System.out.println("Number Of Islands : " + output);
-		
+		System.out.println("BFS - Number Of Islands : " + output);
+		Assertions.assertEquals(1, output, "BFS Incorrect island count...");
+
 		input = new char[][]{
 				{'1', '1', '0', '0', '0'},
 				{'1', '1', '0',	'0', '0'},
@@ -69,17 +71,20 @@ public class ZNumberOfIslands {
 		};
 		System.out.println("Input : " + Arrays.deepToString(input));
 		output = numIslands(input);
-		Assertions.assertEquals(3, output, "Incorrect island count...");
+		System.out.println("DFS - Number Of Islands : " + output);
+		Assertions.assertEquals(3, output, "DFS Incorrect island count...");
+
 		input = new char[][]{
 				{'1', '1', '0', '0', '0'},
 				{'1', '1', '0',	'0', '0'},
 				{'0', '0', '1', '0', '0'},
 				{'0', '0', '0', '1', '1'}
 		};
+		System.out.println("Input : " + Arrays.deepToString(input));
 		output = numIslands1(input);
-		Assertions.assertEquals(3, output, "Incorrect island count...");
-		System.out.println("Number Of Islands : " + output);
-		
+		System.out.println("BFS - Number Of Islands : " + output);
+		Assertions.assertEquals(3, output, "BFS Incorrect island count...");
+
 	}
 	
 	public static int numIslands(char[][] grid) {
@@ -88,12 +93,14 @@ public class ZNumberOfIslands {
 		return count;
 	}
 
-	
+
+
 	public static int numIslands1(char[][] grid) {
 		int count = 0;
 
 		return count;
 	}
+
 
 	static class Point {
 		int x;
