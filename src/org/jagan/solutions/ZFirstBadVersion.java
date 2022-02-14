@@ -1,5 +1,7 @@
 package org.jagan.solutions;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZFirstBadVersion {
 
 	/*
@@ -27,15 +29,19 @@ public class ZFirstBadVersion {
 	 * 
 	 */
 	public static void main(String[] args) {
-		System.out.println("First Bad Version : " + firstBadVersion(5));
-
+		int firstBadVersion = firstBadVersion(5);
+		System.out.println("First Bad Version : " + firstBadVersion);
+		Assertions.assertEquals(4, firstBadVersion);
 	}
 	
 	public static int firstBadVersion(int n) {
-		return 0;
+		int left = 0;
+
+		return left;
 	}
 	
 	public static boolean isBadVersion(int n) {
+		if (n > 3) return true;
 		return false;
 	}
 

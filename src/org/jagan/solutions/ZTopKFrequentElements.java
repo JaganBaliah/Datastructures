@@ -1,6 +1,11 @@
 package org.jagan.solutions;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class ZTopKFrequentElements {
 
@@ -24,6 +29,8 @@ public class ZTopKFrequentElements {
 	}
 	
 	public static Integer[] topKFrequent(int[] nums, int k) {
-		return null;
+		Integer[] rtnVal = new Integer[k];
+
+		return rtnVal;
 	}
 }

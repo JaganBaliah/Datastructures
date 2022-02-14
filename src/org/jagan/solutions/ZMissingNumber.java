@@ -30,10 +30,12 @@ public class ZMissingNumber {
 	}
 	
 	private static int findMissingNumberInSequence(int[] sequence) {
+
 		return 0;
 	}
 	
 	private static int findMissingNumberInSequenceUsingSum(int[] sequence) {
+
 		return 0;
 	}
 	

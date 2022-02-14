@@ -2,6 +2,8 @@ package org.jagan.solutions;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZMergeSortedArray {
 
 	/*
@@ -20,13 +22,24 @@ public class ZMergeSortedArray {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int[] nums1 = {1,2,3,0,0,0};//int[] nums1 = {2,3,4,0,0,0};
-		int[] nums2 = {4,5,6};//int[] nums2 = {1,2,6};
+		int[] nums1 = {1,2,3,0,0,0};
+		int[] nums2 = {2,5,6};
 		System.out.println("Input : nums1 = " + Arrays.toString(nums1) + " : nums2 = " + Arrays.toString(nums2));
 		merge(nums1, 3, nums2, 3);
 		System.out.println("Output : " + Arrays.toString(nums1));
+		Assertions.assertEquals("[1, 2, 2, 3, 5, 6]", Arrays.toString(nums1));
+
+		nums1 = new int[]{2,3,4,0,0,0};
+		nums2 = new int[]{1,2,6};
+		System.out.println("Input : nums1 = " + Arrays.toString(nums1) + " : nums2 = " + Arrays.toString(nums2));
+		merge(nums1, 3, nums2, 3);
+		System.out.println("Output : " + Arrays.toString(nums1));
+		Assertions.assertEquals("[1, 2, 2, 3, 4, 6]", Arrays.toString(nums1));
 	}
 	
-	public static void merge(int[] nums1, int m, int[] nums2, int n) {}
+	public static void merge(int[] nums1, int m, int[] nums2, int n) {
+
+		return;
+	}
 
 }

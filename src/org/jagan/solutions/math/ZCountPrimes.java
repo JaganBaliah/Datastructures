@@ -1,5 +1,7 @@
 package org.jagan.solutions.math;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZCountPrimes {
 
 	/*
@@ -13,11 +15,16 @@ public class ZCountPrimes {
 	 * 
 	 */
 	public static void main(String[] args) {
-		System.out.println("Count of primes less than n = 10 is " + countPrimes(10));
+		int n = 10;
+		int count = countPrimes(n);
+		System.out.printf("Count of primes less than n = %1s is %2s", n, count);
+		Assertions.assertEquals(4, count);
 	}
 	
 	public static int countPrimes(int n) {
-		return 0;
+		int count = 0;
+
+		return count;
 	}
 
 }

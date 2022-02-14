@@ -20,6 +20,7 @@ public class ZSequenceTracking {
 	}
 	
 	private static boolean isBackToStartingPoint(String sequence) {
+
 		return false;
 	}
 }
