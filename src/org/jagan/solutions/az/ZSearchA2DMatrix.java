@@ -2,6 +2,8 @@ package org.jagan.solutions.az;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZSearchA2DMatrix {
 
 	/*
@@ -35,12 +37,16 @@ public class ZSearchA2DMatrix {
 				{18, 21, 23, 26, 30}
 		};
 		System.out.println("Input : " + Arrays.deepToString(input));
-		System.out.println("Output : " + searchMatrix(input, 5));
-		System.out.println("Output : " + searchMatrix(input, 20));
-		
+		boolean found = searchMatrix(input, 5);
+		System.out.println("Output : " + found);
+		Assertions.assertTrue(found);
+		found = searchMatrix(input, 20);
+		System.out.println("Output : " + found);
+		Assertions.assertFalse(found);
 	}
 
 	public static boolean searchMatrix(int[][] matrix, int target) {
+
 		return false;
 	}
 }

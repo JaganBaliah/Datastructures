@@ -93,8 +93,6 @@ public class ZNumberOfIslands {
 		return count;
 	}
 
-
-
 	public static int numIslands1(char[][] grid) {
 		int count = 0;
 

@@ -1,6 +1,10 @@
 package org.jagan.solutions.az;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZTwoSumReturnLargest {
 
@@ -27,13 +31,22 @@ public class ZTwoSumReturnLargest {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int[] input = {20, 50, 40, 25, 30, 10};
+		int[] input = {1, 10, 25, 35, 60};
 		System.out.println("Input : " + Arrays.toString(input));
 		int[] output = solution(input, 60);
 		System.out.println("Output : " + Arrays.toString(output));
+		Assertions.assertEquals("[2, 3]", Arrays.toString(output));
+
+		input = new int[] {20, 50, 40, 25, 30, 10};
+		System.out.println("Input : " + Arrays.toString(input));
+		output = solution(input, 60);
+		System.out.println("Output : " + Arrays.toString(output));
+		Assertions.assertEquals("[1, 5]", Arrays.toString(output));
 	}
 
 	public static int[] solution(int[] input, int target) {
-		return null;
+		int[] rtnVal = new int[2];
+
+		return rtnVal;
 	}
 }

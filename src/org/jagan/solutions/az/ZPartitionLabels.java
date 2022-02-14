@@ -1,6 +1,10 @@
 package org.jagan.solutions.az;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZPartitionLabels {
 
@@ -27,18 +31,14 @@ public class ZPartitionLabels {
 	public static void main(String[] args) {
 		String input = "ababcbacadefegdehijhklij";
 		System.out.println("Input : " + input);
-		System.out.println("Output : " + partitionLabels(input));
-		
-		input = "ababcbacadefegdehijhklij";
-		System.out.println("Input : " + input);
-		System.out.println("Output : " + partitionLabels1(input));
+		List<Integer> output = partitionLabels(input);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals("[9, 7, 8]", Arrays.toString(output.toArray()));
 	}
 
-	public static List<Integer> partitionLabels1(String input) {
-		return null;
-	}
+	public static List<Integer> partitionLabels(String input) {
+		List<Integer> rtnVal = new ArrayList<>();
 
-	public static List<Integer> partitionLabels(String S) {
-		return null;
+		return rtnVal;
 	}
 }

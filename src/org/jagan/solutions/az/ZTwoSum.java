@@ -1,6 +1,8 @@
 package org.jagan.solutions.az;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ZTwoSum {
 
@@ -20,10 +22,12 @@ public class ZTwoSum {
 	 * 
 	 */
 	public static void main(String[] args) {
-		System.out.println("Output : " + Arrays.toString(twoSum(new int[] {2, 7, 11, 15}, 9)));
+		int[] sum = twoSum(new int[] {2, 7, 11, 15}, 9);
+		System.out.println("Output : " + Arrays.toString(sum));
 	}
 
 	public static int[] twoSum(int[] nums, int target) {
+
 		return null;
 	}
 }

@@ -83,11 +83,6 @@ public class ZRottingOranges {
 		Assertions.assertEquals(0, output, "Incorrect time taken...");
 		System.out.println("Time taken in minutes : " + output);
 	}
-	
-	public static int orangesRotting0(int[][] grid) {
-
-		return 0;
-	}
 
 	public static int orangesRotting(int[][] grid) {
 

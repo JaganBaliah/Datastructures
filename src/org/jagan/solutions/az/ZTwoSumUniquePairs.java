@@ -2,6 +2,8 @@ package org.jagan.solutions.az;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZTwoSumUniquePairs {
 
 	/*
@@ -28,19 +30,27 @@ public class ZTwoSumUniquePairs {
 	public static void main(String[] args) {
 		int[] nums = {1, 1, 2, 45, 46, 46};
 		System.out.println("Input : " + Arrays.toString(nums));
-		System.out.println("Output : " + uniquePairs(nums, 47));
-		
+		int output = uniquePairs(nums, 47);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals(2, output);
+
 		nums = new int[]{1, 1};
 		System.out.println("Input : " + Arrays.toString(nums));
+		output = uniquePairs(nums, 2);
 		System.out.println("Output : " + uniquePairs(nums, 2));
+		Assertions.assertEquals(1, output);
 		
 		nums = new int[]{1, 5, 1, 5};
 		System.out.println("Input : " + Arrays.toString(nums));
+		output = uniquePairs(nums, 6);
 		System.out.println("Output : " + uniquePairs(nums, 6));
+		Assertions.assertEquals(1, output);
 	}
 
 	public static int uniquePairs(int[] nums, int target) {
-		return 0;
+		int count = 0;
+
+		return count;
 	}
 
 }

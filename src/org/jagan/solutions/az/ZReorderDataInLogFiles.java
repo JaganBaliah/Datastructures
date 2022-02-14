@@ -2,6 +2,8 @@ package org.jagan.solutions.az;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZReorderDataInLogFiles {
 
 	/*
@@ -43,48 +45,37 @@ public class ZReorderDataInLogFiles {
 		String[] logs = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
 		System.out.println("Input : " + Arrays.toString(logs));
 		solution(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
+		System.out.println("Output : " + Arrays.toString(logs));
+		Assertions.assertEquals("[let1 art can, let3 art zero, let2 own kit dig, dig1 8 1 5 1, dig2 3 6]", Arrays.toString(logs));
 
 		logs = new String[]{"dig12 8 1 5 1","let11 art can","dig23 3 6","let2 own kit dig","let1 art can"};
 		System.out.println("Input : " + Arrays.toString(logs));
 		solution(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
+		System.out.println("Output : " + Arrays.toString(logs));
+		Assertions.assertEquals("[let1 art can, let11 art can, let2 own kit dig, dig12 8 1 5 1, dig23 3 6]", Arrays.toString(logs));
 		
 		System.out.println();
 		
 		logs = new String[]{"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
 		System.out.println("Input : " + Arrays.toString(logs));
 		solution1(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
+		System.out.println("Output : " + Arrays.toString(logs));
+		Assertions.assertEquals("[let1 art can, let3 art zero, let2 own kit dig, dig1 8 1 5 1, dig2 3 6]", Arrays.toString(logs));
 
 		logs = new String[]{"dig12 8 1 5 1","let11 art can","dig23 3 6","let2 own kit dig","let1 art can"};
 		System.out.println("Input : " + Arrays.toString(logs));
 		solution1(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
-		
-		System.out.println();
-		
-		logs = new String[]{"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
-		System.out.println("Input : " + Arrays.toString(logs));
-		solution2(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
+		System.out.println("Output : " + Arrays.toString(logs));
+		Assertions.assertEquals("[let1 art can, let11 art can, let2 own kit dig, dig12 8 1 5 1, dig23 3 6]", Arrays.toString(logs));
 
-		logs = new String[]{"dig12 8 1 5 1","let11 art can","dig23 3 6","let2 own kit dig","let1 art can"};
-		System.out.println("Input : " + Arrays.toString(logs));
-		solution2(logs);
-		System.out.println("Output : " + Arrays.deepToString(logs));
-	}
-
-	public static void solution2(String[] logs) {
-		
 	}
 
 	public static void solution(String[] logs) {
-		
+
 	}
-	
+
 	public static void solution1(String[] logs) {
-		 
+
 	}
 
 }

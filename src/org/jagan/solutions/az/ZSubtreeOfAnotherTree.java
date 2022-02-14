@@ -1,5 +1,7 @@
 package org.jagan.solutions.az;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZSubtreeOfAnotherTree {
 
 	/*
@@ -49,18 +51,25 @@ public class ZSubtreeOfAnotherTree {
 		sTNode1.left = new TreeNode(4, new TreeNode(1), new TreeNode(2));
 		sTNode1.right = new TreeNode(5);
 		TreeNode tTNode1 = new TreeNode(4, new TreeNode(1), new TreeNode(2));
-		System.out.println("Is SubTree : " + isSubTree(sTNode1, tTNode1));
+		boolean subTree = isSubTree(sTNode1, tTNode1);
+		System.out.println("Is SubTree : " + subTree);
+		Assertions.assertTrue(subTree);
 		
 		sTNode1.left = new TreeNode(4, new TreeNode(1), new TreeNode(2, new TreeNode(0), null));
-		System.out.println("Is SubTree : " + isSubTree(sTNode1, tTNode1));
-		
-		System.out.println("Is SubTree : " + isSubTree(null, null));
+		subTree = isSubTree(sTNode1, tTNode1);
+		System.out.println("Is SubTree : " + subTree);
+		Assertions.assertFalse(subTree);
+
+		subTree = isSubTree(null, null);
+		System.out.println("Is SubTree : " + subTree);
+		Assertions.assertFalse(subTree);
 	}
 
 	public static boolean isSubTree(TreeNode s, TreeNode t) {
+
 		return false;
 	}
-	
+
 	static class TreeNode {
 		int val;
 		TreeNode left;

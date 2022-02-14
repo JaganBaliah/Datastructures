@@ -5,9 +5,8 @@ public class ZTrieUtil {
 	public static void main(String[] args) {
 		//String[] keys = new String[] {"apple", "ball", "cat", "apply", "bat", "batch"};
 		String[] keys = new String[] {"ball", "bat"};
-		Trie root = new Trie();
+		TrieNode root = new TrieNode();
 		insert(root, keys);
-		System.out.println(root);
 		boolean found = false;
 		
 		found = search(root, "bat");
@@ -19,14 +18,21 @@ public class ZTrieUtil {
 		
 	}
 	
-	public static void insert(Trie root, String[] keys) {}
+	public static void insert(TrieNode root, String[] keys) {
 
-	private static boolean search(Trie root, String string) {
+
+	}
+
+	private static boolean search(TrieNode root, String string) {
+
 		return false;
 	}
 	
-	static class Trie {
-		
+	static class TrieNode {
+
+		TrieNode() {
+
+		}
 	}
 	
 }

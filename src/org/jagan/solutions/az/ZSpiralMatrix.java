@@ -2,6 +2,8 @@ package org.jagan.solutions.az;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZSpiralMatrix {
 
 	/*
@@ -23,15 +25,22 @@ public class ZSpiralMatrix {
 	public static void main(String[] args) {
 		System.out.println("Input : " + 3);
 		int[][] matrix = spiralMatrix(3);
-		System.out.println("Output  : " + Arrays.deepToString(matrix));
+		String output = Arrays.deepToString(matrix);
+		System.out.println("Output  : " + output);
+		Assertions.assertEquals("[[1, 2, 3], [8, 9, 4], [7, 6, 5]]", output);
 		
 		System.out.println("Input : " + 4);
 		matrix = spiralMatrix(4);
-		System.out.println("Output  : " + Arrays.deepToString(matrix));
+		output = Arrays.deepToString(matrix);
+		System.out.println("Output  : " + output);
+		Assertions.assertEquals("[[1, 2, 3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]]", output);
 	}
 
 	public static int[][] spiralMatrix(int n) {
-		return null;
+		int[][] rtnVal = new int[n][n];
+
+
+		return rtnVal;
 	}
 
 }

@@ -2,7 +2,10 @@ package org.jagan.solutions.az;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ZOptimalUtilization {
 
@@ -66,7 +69,7 @@ public class ZOptimalUtilization {
 		b.add(new int[]{1, 2});
 		int t = 7;
 		printInput(a, b, t);
-		List<int[]> output = solution2(a, b, t);
+		List<int[]> output = solution(a, b, t);
 		printOutput(output);
 		
 		a = new ArrayList<int[]>();
@@ -81,7 +84,7 @@ public class ZOptimalUtilization {
 		b.add(new int[]{4, 5});
 		t = 10;
 		printInput(a, b, t);
-		output = solution2(a, b, t);
+		output = solution(a, b, t);
 		printOutput(output);
 		
 		a = new ArrayList<int[]>();
@@ -94,7 +97,7 @@ public class ZOptimalUtilization {
 		b.add(new int[]{3, 14});
 		t = 20;
 		printInput(a, b, t);
-		output = solution2(a, b, t);
+		output = solution(a, b, t);
 		printOutput(output);
 
 		a = new ArrayList<int[]>();
@@ -107,22 +110,16 @@ public class ZOptimalUtilization {
 		b.add(new int[]{3, 12});
 		t = 20;
 		printInput(a, b, t);
-		output = solution2(a, b, t);
+		output = solution(a, b, t);
 		printOutput(output);
 	}
 
-	public static List<int[]> solution2(List<int[]> aList, List<int[]> bList, int target) {
-		return null;
+	public static List<int[]> solution(List<int[]> aList, List<int[]> bList, int target) {
+		List<int[]> rtnVal = new ArrayList<>();
+
+		return rtnVal;
 	}
 
-	public static List<int[]> solution(List<int[]> aList, List<int[]> bList, int target) {
-		return null;
-	}
-	
-	public static List<int[]> solution1(List<int[]> aList, List<int[]> bList, int target) {
-		return null;
-	}
-	
 	private static void printOutput(List<int[]> output) {
 		System.out.println("Output : ");
 		output.stream().forEach(e -> System.out.print(Arrays.toString(e)));

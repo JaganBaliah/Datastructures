@@ -2,6 +2,8 @@ package org.jagan.solutions.az;
 
 import java.util.Arrays;
 
+import org.junit.jupiter.api.Assertions;
+
 public class ZPointOfLattice {
 
 	/*
@@ -35,13 +37,18 @@ public class ZPointOfLattice {
 	public static void main(String[] args) {
 		int[] output = lattice(-1, 3, 3, 1);
 		System.out.println("Output : " + Arrays.toString(output));
+		Assertions.assertEquals("[2, -1]", Arrays.toString(output));
 	}
 
 	public static int[] lattice(int ax, int ay, int bx, int by) {
-		return null;
+		int[] rtnVal = new int[2];
+
+
+		return rtnVal;
 	}
 
-    public static int gcd(int x, int y) {
-    	return y == 0 ? x : gcd(y, x % y);
-    }
+	private static int gcd(int x, int y) {
+		return y == 0 ? x : gcd(y, x % y);
+	}
+
 }

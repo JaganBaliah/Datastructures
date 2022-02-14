@@ -1,7 +1,12 @@
 package org.jagan.solutions.az;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZSubStringOfSizeKAndKDistinctChars {
 
@@ -33,18 +38,25 @@ public class ZSubStringOfSizeKAndKDistinctChars {
 		String input = "abcabc";
 		int k = 3;
 		System.out.println("Input : " + input);
-		System.out.println("Output : " + kSubstring(input, k));
+		List<String> output = kSubstring(input, k);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals("[bca, abc, cab]", output.toString());
 		
 		input = "abacab";
 		k = 3;
 		System.out.println("Input : " + input);
-		System.out.println("Output : " + kSubstring(input, k));
+		output = kSubstring(input, k);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals("[bac, cab]", output.toString());
 		
 		input = "awaglknagawunagwkwagl";
 		k = 4;
 		System.out.println("Input : " + input);
-		System.out.println("Output : " + kSubstring(input, k));
-		
+		output = kSubstring(input, k);
+		System.out.println("Output : " + output);
+		Assertions.assertEquals("[lkna, nagw, kwag, awun, wuna, agwk, wagl, aglk, glkn, gawu, unag, knag]", output.toString());
+
+
 		input = "abcabc";
 		k = 3;
 		System.out.println("Input : " + input);
@@ -86,6 +98,9 @@ public class ZSubStringOfSizeKAndKDistinctChars {
 	}
 
 	public static List<String> kSubstring(String s, int k) {
-		return null;
+		Set<String> rtnVal = new HashSet<>();
+
+
+		return new ArrayList<>(rtnVal);
 	}
 }

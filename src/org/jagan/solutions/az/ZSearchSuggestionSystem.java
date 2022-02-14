@@ -1,7 +1,11 @@
 package org.jagan.solutions.az;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.junit.jupiter.api.Assertions;
 
 public class ZSearchSuggestionSystem {
 
@@ -46,25 +50,35 @@ public class ZSearchSuggestionSystem {
 	public static void main(String[] args) {
 		String[] products = {"mobile","mouse","moneypot","monitor","mousepad"};
 		String searchWord = "mouse";
-		System.out.println("Suggested Products : " + suggestedProducts(products, searchWord));
+		List<List<String>> output = suggestedProducts(products, searchWord);
+		System.out.println("Suggested Products : " + output);
+		Assertions.assertEquals("[[mobile, moneypot, monitor], [mobile, moneypot, monitor], [mouse, mousepad], [mouse, mousepad], [mouse, mousepad]]", output.toString());
 		
 		System.out.println();
 		
 		products = new String[]{"havana"};
 		searchWord = "havana";
-		System.out.println("Suggested Products : " + suggestedProducts(products, searchWord));
-		
+		output = suggestedProducts(products, searchWord);
+		System.out.println("Suggested Products : " + output);
+		Assertions.assertEquals("[[havana], [havana], [havana], [havana], [havana], [havana]]", output.toString());
+
+
 		System.out.println();
 		
 		products = new String[]{"bags","baggage","banner","box","cloths"};
 		searchWord = "bags";
-		System.out.println("Suggested Products : " + suggestedProducts(products, searchWord));
-		
+		output = suggestedProducts(products, searchWord);
+		System.out.println("Suggested Products : " + output);
+		Assertions.assertEquals("[[baggage, bags, banner], [baggage, bags, banner], [baggage, bags], [bags]]", output.toString());
+
 		System.out.println();
 		
 		products = new String[]{"havana"};
 		searchWord = "tatiana";
-		System.out.println("Suggested Products : " + suggestedProducts(products, searchWord));
+		output = suggestedProducts(products, searchWord);
+		System.out.println("Suggested Products : " + output);
+		Assertions.assertEquals("[[], [], [], [], [], [], []]", output.toString());
+
 	}
 
 	static class Trie {
@@ -73,6 +87,8 @@ public class ZSearchSuggestionSystem {
     }
 	
     public static List<List<String>> suggestedProducts(String[] products, String searchWord) {
-    	return null;
+    	List<List<String>> rtnVal = new ArrayList();
+
+	    return rtnVal;
     }
 }
